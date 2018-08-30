@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "soojung.color.css",
+	"sources": [
+		"soojung.color.sass"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,YAAY,CAAC;EACX,UAAU,EAHE,OAAO,GAGQ;;AAC7B,AAAA,aAAa,CAAC;EACZ,UAAU,EALE,OAAO;EAMnB,OAAO,EAAE,GAAG,GAAG;;AAEjB,AAAA,WAAW,CAAC;EACV,KAAK,EARU,OAAO,GAQG"
+}

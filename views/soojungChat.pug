@@ -1,0 +1,96 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/soojung.layout.css')
+    link(rel='stylesheet', href='/stylesheets/soojung.color.css')
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+
+  body
+    .chat-wrapper
+      .empty-bar
+      .left-side-bar
+        .left-header
+          .header-image SL
+          .header-name soojung.lee
+          .header-status
+            .i.fas.fa-angle-down
+        .left-input
+          .input-bar
+            .i.fas.fa-search
+            input(placeholder="검색 (CMD+K)")
+          .adder +
+        .left-body-content
+          .empty-content
+          .header-content 즐겨찾기 (1)
+          .item-content
+            .item-private.i.fas.fa-lock
+            .item-text class_level1
+            .item-view.i.far.fa-eye-slash.show
+            .item-status.i.fas.fa-sign-out-alt.show
+          .empty-content
+          .header-content 채널(1)
+          .item-content
+            .item-private.i.fas.fa-lock
+            .item-text general
+            .item-view.i.far.fa-eye-slash.show
+            .item-status.i.fas.fa-sign-out-alt.show
+        .left-footer TheTheChat
+      .main-content
+        .main-header
+          .i.far.fa-star
+          .i.fas.fa-lock
+          .header-text class_level1
+
+        .main-chatting
+        .main-input
+          .main-input-content
+            .input-bar
+              .i.far.fa-grin
+              textarea(placeholder='메세지')
+            .content-bar
+              .contents
+                .i.fas.fa-paperclip
+                .i.fas.fa-microphone
+                .i.fas.fa-video
+              .empty-content
+      .right-side-bar
+        .icon.i.fas.fa-info-circle
+        .icon.i.fas.fa-search
+        .icon.i.fas.fa-users
+        .icon.i.fas.fa-bell
+        .icon.i.fas.fa-paperclip
+        .icon.i.fas.fa-at
+        .icon.i.fas.fa-star
+        .icon.i.fas.fa-thumbtack
+
+    //.wrapper
+    //  .empty-bar
+    //  .channel-display
+    //    .channel-header.first-color
+    //      .profile-image JH
+    //      .profile-name Jaejong Heo
+    //      .logout-button
+    //        .i.fas.fa-angle-down
+    //    .channel-option.first-color
+    //      .input-search
+    //        .i.fas.fa-search
+    //        input(placeholder="검색( CMD+K)")
+    //      .channel-adder +
+    //    .channel-body.first-color
+    //      .channel-group 즐겨찾기
+    //      .channel-item
+    //        .icon-type.icon.i.fas.fa-lock
+    //        .text 안녕
+    //        .icon-hide.icon.i.far.fa-eye-slash
+    //        .icon-quit.icon.i.fas.fa-sign-out-alt
+    //      .channel-item s
+    //      .channel-group 즐겨찾기
+    //      .channel-item a
+    //      .channel-item s
+    //      .channel-group 즐겨찾기
+    //      .channel-item a
+    //      .channel-item s
+    //    .channel-footer the.the.chat
+    //  .main-display
+    //  .function-display

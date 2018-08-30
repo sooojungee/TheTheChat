@@ -10,5 +10,8 @@ router.get('/chat', function(req, res, next) {
   res.render('layout', { title: 'Express' });
 });
 
+router.get('/soo', function(req, res, next) {
+  res.render('soojungChat', { title: 'Express' });
+});
 
 module.exports = router;
