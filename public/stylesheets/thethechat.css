@@ -1,0 +1,101 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  display: flex;
+  height: 100vh; }
+  .wrapper .empty-bar {
+    width: 72px;
+    height: 100%;
+    background: #000; }
+  .wrapper .channel-display {
+    width: 280px;
+    height: 100%;
+    background: blue; }
+    .wrapper .channel-display .channel-header {
+      width: 100%;
+      height: 64px;
+      padding: 8px;
+      display: flex;
+      background: #ccc; }
+      .wrapper .channel-display .channel-header .profile-image {
+        width: 48px;
+        background-color: #00B7FF;
+        height: 100%;
+        border-radius: 8px;
+        line-height: 48px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem; }
+      .wrapper .channel-display .channel-header .profile-name {
+        flex: 1;
+        height: 100%;
+        line-height: 48px;
+        padding: 0 8px; }
+      .wrapper .channel-display .channel-header .logout-button {
+        background-color: red;
+        width: 32px;
+        height: 100%; }
+    .wrapper .channel-display .channel-option {
+      display: flex;
+      background-color: #00B7FF;
+      width: 100%;
+      height: 52px;
+      padding: 8px; }
+      .wrapper .channel-display .channel-option .input-search {
+        width: 232px; }
+        .wrapper .channel-display .channel-option .input-search input {
+          height: 100%;
+          width: 100%;
+          border-radius: 8px;
+          border-color: white; }
+      .wrapper .channel-display .channel-option .channel-adder {
+        flex: 1;
+        text-align: center;
+        line-height: 36px;
+        font-size: 24px; }
+    .wrapper .channel-display .channel-body {
+      width: 100%;
+      height: calc(100% - 188px);
+      color: white;
+      padding: 16px 0 16px 16px; }
+      .wrapper .channel-display .channel-body .channel-group {
+        margin-top: 24px;
+        background: hotpink;
+        padding: 4px; }
+      .wrapper .channel-display .channel-body .channel-item {
+        width: 100%;
+        background: peachpuff;
+        display: flex;
+        height: 24px; }
+        .wrapper .channel-display .channel-body .channel-item .icon {
+          width: 24px;
+          height: 100%;
+          background: mediumpurple; }
+        .wrapper .channel-display .channel-body .channel-item .text {
+          flex: 1;
+          height: 100%;
+          background: magenta; }
+    .wrapper .channel-display .channel-footer {
+      width: 100%;
+      height: 72px;
+      background: gold;
+      padding: 16px;
+      font-size: 40px;
+      line-height: 40px;
+      text-align: center; }
+  .wrapper .main-display {
+    flex: 1;
+    height: 100%; }
+  .wrapper .function-display {
+    width: 72px;
+    height: 100%;
+    background: mediumpurple; }
+
+/*# sourceMappingURL=thethechat.css.map */
