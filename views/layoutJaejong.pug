@@ -1,0 +1,98 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title TheTheChat
+
+    // material icon
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet")
+    // fontawesome
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+
+    link(rel='stylesheet', href='/stylesheets/thethechatJaejong.css')
+
+  body
+    .wrapper
+      .empty-bar
+      .channel-display
+        .channel-header
+          .profile-image JH
+          .profile-name Jaejong Heo
+          .logout-button
+        .channel-option
+          .input-search
+            input
+          i.fas.fa-plus.channel-adder
+        .channel-body
+          .channel-group 채널 (4)
+          .channel-item
+            .icon-type.icon #
+            .text general
+            i.far.fa-eye-slash.icon.hidden
+            i.fas.fa-sign-out-alt.icon.hidden
+          .channel-item
+            i.fas.fa-lock
+            .text class_level1
+            i.far.fa-eye-slash.icon.hidden
+            i.fas.fa-sign-out-alt.icon.hidden
+          .channel-group 귓속말 (8)
+          .channel-item a
+          .channel-item s
+          .channel-item a
+          .channel-item s
+        .channel-footer THETHE.CHAT
+      .main-display
+        .chat-title-zone
+          i.material-icons star_border
+          i.material-icons lock
+          .chat-title web-class
+        .chat-logs-zone
+          .chat-with-profile
+            .profile-image HW
+            .text-zone
+              .profile-informations
+                .profile-name hyunwoo.han
+                .leader-mark Admin
+                .leader-mark Owner
+                .time 오후 4시 8분
+                i.fas.fa-cog
+              .chat-log 그렇게 채팅을 하였습니다.
+          .simple-chat
+            i.fas.fa-cog
+            .chat-log 호호호호 채팅이다
+          .simple-chat
+            i.fas.fa-cog
+            .chat-log 여러번 채팅을 해줘야 제맛이라고
+          .simple-chat
+            i.fas.fa-cog
+            .chat-log 볼 수 있죠 ㅎㅎ
+          .chat-with-profile
+            .profile-image JH
+            .text-zone
+              .profile-informations
+                .profile-name jaejong.heo
+                .time 오후 4시 10분
+              .chat-log 정말요?
+          .simple-chat
+            i.fas.fa-cog
+            .chat-log 그게 가능한가요?!
+
+        .chat-sender
+          .sender-group
+            i.material-icons.emoticon-adder insert_emoticon
+            textarea.message-content
+            i.material-icons.file-adder attachment
+            i.material-icons.file-adder mic
+            i.material-icons.file-adder videocam
+
+
+      .function-display
+        i.material-icons info
+        i.material-icons search
+        i.material-icons people
+        i.material-icons notifications
+        i.material-icons attachment
+        i.material-icons alternate_email
+        i.material-icons star
+        i.material-icons bookmark

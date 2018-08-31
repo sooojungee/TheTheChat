@@ -18,5 +18,8 @@ router.get('/hyeonsik', function(req, res, next) {
     res.render('hyeonsik', { title: 'Express' });
 });
 
+router.get('/jaejong', function(req, res, next) {
+    res.render('layoutJaejong');
+});
 
 module.exports = router;
