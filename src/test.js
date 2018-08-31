@@ -1,7 +1,10 @@
-
-let textareaHeight = 0;
-
-$('textarea').on('keydown', function () {
-    $(this).height(1).height($(this).prop('scrollHeight') + 24);
-    textareaHeight = $('textarea').css('height').split('p')[0] * 1;
+$('textarea').on('keyup keydown', ()=>{
+  adjustHeight();
 });
+
+function adjustHeight() {
+  var textEle = $('textarea');
+  textEle[0].style.height = 'auto';
+  var textEleHeight = textEle.prop('scrollHeight');
+  textEle.css('height', textEleHeight);
+};
