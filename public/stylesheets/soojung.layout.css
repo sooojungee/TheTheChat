@@ -139,7 +139,9 @@ body {
       font-weight: 800; }
   .chat-wrapper .main-part {
     flex: 1;
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
     .chat-wrapper .main-part .main-header {
       width: 100%;
       height: 50px;
@@ -159,7 +161,7 @@ body {
         font-size: 21px; }
     .chat-wrapper .main-part .main-chatting {
       width: 100%;
-      height: calc(100% - 130px);
+      flex: 1;
       overflow-y: auto; }
       .chat-wrapper .main-part .main-chatting .chat-date {
         width: 100%;
@@ -229,12 +231,11 @@ body {
             font-size: 12px; }
     .chat-wrapper .main-part .main-input {
       width: 100%;
-      height: 80px;
+      max-height: 160px;
       border-top: 1px solid #ddd;
       padding: 8px 16px 16px 16px; }
       .chat-wrapper .main-part .main-input .main-input-content {
         width: 100%;
-        height: 56px;
         border: 1px solid #ddd;
         border-radius: 4px;
         display: flex; }
@@ -250,11 +251,12 @@ body {
           .chat-wrapper .main-part .main-input .main-input-content .input-bar textarea {
             width: 100%;
             height: 100%;
+            max-height: 100px;
             padding-left: 32px;
             padding-top: 8px;
             border: none;
             outline: none;
-            background: #FFF7DF; }
+            overflow: auto; }
             .chat-wrapper .main-part .main-input .main-input-content .input-bar textarea::placeholder {
               color: #999; }
         .chat-wrapper .main-part .main-input .main-input-content .content-bar {
