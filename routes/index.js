@@ -22,4 +22,9 @@ router.get('/jaejong', function(req, res, next) {
     res.render('layoutJaejong');
 });
 
+
+router.get('/junyup', function(req, res, next) {
+  res.render('junyupChat');
+});
+
 module.exports = router;
