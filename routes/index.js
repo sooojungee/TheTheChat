@@ -14,4 +14,9 @@ router.get('/soo', function(req, res, next) {
   res.render('soojungChat', { title: 'Express' });
 });
 
+router.get('/hyeonsik', function(req, res, next) {
+    res.render('hyeonsik', { title: 'Express' });
+});
+
+
 module.exports = router;

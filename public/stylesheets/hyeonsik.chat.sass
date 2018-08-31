@@ -1,0 +1,165 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+.main-container
+  display: flex
+  height: 100vh
+  .channel-container
+    width: 280px
+    height: 100%
+    background: #cccccc
+    .channel-profile
+      width: 100%
+      height: 64px
+      padding: 8px
+      display: flex
+      background: #222222
+      .profile-image
+        width: 48px
+        height: 100%
+        background: #777777
+        text-align: center
+        line-height: 48px
+      .profile-name
+        flex: 1
+        height: 100%
+        padding: 0 8px
+        color: #eeeeee
+        line-height: 48px
+      .profile-logout
+        width: 48px
+        height: 100%
+        background: #777
+    .channel-option
+      display: flex
+      width: 100%
+      height: 52px
+      background: #eee
+      padding: 8px
+      .input-search
+        width: 216px
+        height: 100%
+        background: #aaa
+        margin-right: 8px
+      .channel-adder
+        // 280 - 16 - 8 - 216
+        width: 40px
+        height: 100%
+        background: #aaa
+    .channel-body
+      width: 100%
+      height: calc(100% - 188px)
+      padding: 16px 0 16px 16px
+      background: #ddd
+      direction: rtl
+      overflow-y: scroll
+      .channel-group
+        width: 100%
+        height: 40px
+        line-height: 40px
+        background: #555
+        direction: ltr
+      .channel-item
+        width: 100%
+        height: 32px
+        background: #777
+        line-height: 32px
+        direction: ltr
+      .channel-empty
+        width: 100%
+        height: 24px
+        direction: ltr
+      .channel-adder
+        width: 100%
+        height: 24px
+        line-height: 24px
+        font-size: 12px
+        background: #eee
+        direction: ltr
+    .channel-footer
+      width: 100%
+      height: 72px
+      background: #222
+      color: white
+      font-size: 36px
+      line-height: 72px
+      text-align: center
+  .chat-container
+    flex: 1
+    height: 100%
+    .chat-header
+      width: 100%
+      height: 64px
+      border-bottom: 1px solid #555555
+      padding: 8px 16px
+      display: flex
+      .chat-favorite
+        width: 48px
+        height: 100%
+        background: #aaa
+      .chat-title
+        flex: 1
+        height: 100%
+        line-height: 48px
+        padding: 0 8px
+    .chat-body
+      width: 100%
+      height: calc(100% - 136px)
+      overflow-y: scroll
+      .chat-item
+        width: 100%
+        height: 100%
+        display: flex
+        .chat-item-nav
+          width: 80px
+          height: auto
+          background: #aaa
+          padding: 8px
+          .chat-item-profile
+            float: right
+            width: 48px
+            height: 48px
+            background: #eee
+            line-height: 48px
+            text-align: center
+        .chat-item-body
+          flex: 1
+          height: auto
+          .chat-item-info
+            width: 100%
+            height: 24px
+            display: flex
+            padding: 8px
+            .chat-item-user-name
+              margin-right: 8px
+            .chat-item-user-type
+              margin-right: 8px
+            .chat-item-time
+              margin-right: 8px
+            .chat-item-settings
+              margin-right: 8px
+          .chat-item-message
+            width: 100%
+            height: auto
+            padding: 8px
+
+
+    .chat-sender
+      width: 100%
+      height: 72px
+      background: #222
+
+
+  .function-bar
+    width: 48px
+    height: 100%
+    background: #cccccc
+
+
+

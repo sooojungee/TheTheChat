@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.main-container {
+  display: flex;
+  height: 100vh; }
+  .main-container .channel-container {
+    width: 280px;
+    height: 100%;
+    background: #cccccc; }
+    .main-container .channel-container .channel-profile {
+      width: 100%;
+      height: 64px;
+      padding: 8px;
+      display: flex;
+      background: #222222; }
+      .main-container .channel-container .channel-profile .profile-image {
+        width: 48px;
+        height: 100%;
+        background: #777777;
+        text-align: center;
+        line-height: 48px; }
+      .main-container .channel-container .channel-profile .profile-name {
+        flex: 1;
+        height: 100%;
+        padding: 0 8px;
+        color: #eeeeee;
+        line-height: 48px; }
+      .main-container .channel-container .channel-profile .profile-logout {
+        width: 48px;
+        height: 100%;
+        background: #777; }
+    .main-container .channel-container .channel-option {
+      display: flex;
+      width: 100%;
+      height: 52px;
+      background: #eee;
+      padding: 8px; }
+      .main-container .channel-container .channel-option .input-search {
+        width: 216px;
+        height: 100%;
+        background: #aaa;
+        margin-right: 8px; }
+      .main-container .channel-container .channel-option .channel-adder {
+        width: 40px;
+        height: 100%;
+        background: #aaa; }
+    .main-container .channel-container .channel-body {
+      width: 100%;
+      height: calc(100% - 188px);
+      padding: 16px 0 16px 16px;
+      background: #ddd;
+      direction: rtl;
+      overflow-y: scroll; }
+      .main-container .channel-container .channel-body .channel-group {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: #555;
+        direction: ltr; }
+      .main-container .channel-container .channel-body .channel-item {
+        width: 100%;
+        height: 32px;
+        background: #777;
+        line-height: 32px;
+        direction: ltr; }
+      .main-container .channel-container .channel-body .channel-empty {
+        width: 100%;
+        height: 24px;
+        direction: ltr; }
+      .main-container .channel-container .channel-body .channel-adder {
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        background: #eee;
+        direction: ltr; }
+    .main-container .channel-container .channel-footer {
+      width: 100%;
+      height: 72px;
+      background: #222;
+      color: white;
+      font-size: 36px;
+      line-height: 72px;
+      text-align: center; }
+  .main-container .chat-container {
+    flex: 1;
+    height: 100%; }
+    .main-container .chat-container .chat-header {
+      width: 100%;
+      height: 64px;
+      border-bottom: 1px solid #555555;
+      padding: 8px 16px;
+      display: flex; }
+      .main-container .chat-container .chat-header .chat-favorite {
+        width: 48px;
+        height: 100%;
+        background: #aaa; }
+      .main-container .chat-container .chat-header .chat-title {
+        flex: 1;
+        height: 100%;
+        line-height: 48px;
+        padding: 0 8px; }
+    .main-container .chat-container .chat-body {
+      width: 100%;
+      height: calc(100% - 136px);
+      overflow-y: scroll; }
+      .main-container .chat-container .chat-body .chat-item {
+        width: 100%;
+        height: 100%;
+        display: flex; }
+        .main-container .chat-container .chat-body .chat-item .chat-item-nav {
+          width: 80px;
+          height: auto;
+          background: #aaa;
+          padding: 8px; }
+          .main-container .chat-container .chat-body .chat-item .chat-item-nav .chat-item-profile {
+            float: right;
+            width: 48px;
+            height: 48px;
+            background: #eee;
+            line-height: 48px;
+            text-align: center; }
+        .main-container .chat-container .chat-body .chat-item .chat-item-body {
+          flex: 1;
+          height: auto; }
+          .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-info {
+            width: 100%;
+            height: 24px;
+            display: flex;
+            padding: 8px; }
+            .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-info .chat-item-user-name {
+              margin-right: 8px; }
+            .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-info .chat-item-user-type {
+              margin-right: 8px; }
+            .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-info .chat-item-time {
+              margin-right: 8px; }
+            .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-info .chat-item-settings {
+              margin-right: 8px; }
+          .main-container .chat-container .chat-body .chat-item .chat-item-body .chat-item-message {
+            width: 100%;
+            height: auto;
+            padding: 8px; }
+    .main-container .chat-container .chat-sender {
+      width: 100%;
+      height: 72px;
+      background: #222; }
+  .main-container .function-bar {
+    width: 48px;
+    height: 100%;
+    background: #cccccc; }
+
+/*# sourceMappingURL=hyeonsik.chat.css.map */
