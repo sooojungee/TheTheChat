@@ -87,30 +87,30 @@ body {
         color: #cccc;
         font-size: 22px;
         font-weight: 500; }
-    .chat-wrapper .left-side-bar .left-body-content {
+    .chat-wrapper .left-side-bar .left-body-part {
       width: 100%;
       height: calc(100% - 155px);
       overflow-y: auto;
       background: rgba(2, 67, 106, 0.97);
       padding: 8px;
       color: rgba(255, 255, 255, 0.85); }
-      .chat-wrapper .left-side-bar .left-body-content .empty-content {
+      .chat-wrapper .left-side-bar .left-body-part .empty-part {
         width: 100%;
         height: 10px; }
-      .chat-wrapper .left-side-bar .left-body-content .header-content {
+      .chat-wrapper .left-side-bar .left-body-part .header-part {
         width: 100%;
         height: 24px;
         font-size: 11px;
         line-height: 24px;
         color: inherit;
         padding-left: 8px; }
-      .chat-wrapper .left-side-bar .left-body-content .item-content {
+      .chat-wrapper .left-side-bar .left-body-part .item-part {
         width: 100%;
         height: 24px;
         display: flex;
         cursor: pointer;
         padding-left: 4px; }
-        .chat-wrapper .left-side-bar .left-body-content .item-content .i {
+        .chat-wrapper .left-side-bar .left-body-part .item-part .i {
           width: 18px;
           height: 100%;
           color: inherit;
@@ -118,15 +118,15 @@ body {
           opacity: 0.8;
           line-height: 24px;
           text-align: center; }
-        .chat-wrapper .left-side-bar .left-body-content .item-content .item-text {
+        .chat-wrapper .left-side-bar .left-body-part .item-part .item-text {
           flex: 1;
           font-size: 12px;
           line-height: 24px; }
-        .chat-wrapper .left-side-bar .left-body-content .item-content .show {
+        .chat-wrapper .left-side-bar .left-body-part .item-part .show {
           display: none; }
-        .chat-wrapper .left-side-bar .left-body-content .item-content:hover {
+        .chat-wrapper .left-side-bar .left-body-part .item-part:hover {
           background: #04436a; }
-          .chat-wrapper .left-side-bar .left-body-content .item-content:hover .show {
+          .chat-wrapper .left-side-bar .left-body-part .item-part:hover .show {
             display: block; }
     .chat-wrapper .left-side-bar .left-footer {
       width: 100%;
@@ -137,51 +137,117 @@ body {
       color: white;
       font-size: 38px;
       font-weight: 800; }
-  .chat-wrapper .main-content {
+  .chat-wrapper .main-part {
     flex: 1;
     height: 100%; }
-    .chat-wrapper .main-content .main-header {
+    .chat-wrapper .main-part .main-header {
       width: 100%;
       height: 50px;
       border-bottom: 1px solid #ddd;
       padding: 8px 16px;
       display: flex; }
-      .chat-wrapper .main-content .main-header .i {
+      .chat-wrapper .main-part .main-header .i {
         width: 32px;
         height: 100%;
         line-height: 34px;
         color: #ccc; }
-      .chat-wrapper .main-content .main-header .header-text {
+      .chat-wrapper .main-part .main-header .header-text {
         flex: 1;
         height: 100%;
         line-height: 34px;
         color: #333;
         font-size: 21px; }
-    .chat-wrapper .main-content .main-chatting {
+    .chat-wrapper .main-part .main-chatting {
       width: 100%;
       height: calc(100% - 130px);
       overflow-y: auto; }
-    .chat-wrapper .main-content .main-input {
+      .chat-wrapper .main-part .main-chatting .chat-date {
+        width: 100%;
+        height: 40px;
+        display: flex; }
+        .chat-wrapper .main-part .main-chatting .chat-date .date-line {
+          flex: 1;
+          height: 20px;
+          border-bottom: 1px solid #dedede; }
+        .chat-wrapper .main-part .main-chatting .chat-date .date-text {
+          width: 110px;
+          line-height: 40px;
+          text-align: center;
+          height: 40px;
+          font-size: 10px;
+          color: #444;
+          font-weight: 600; }
+      .chat-wrapper .main-part .main-chatting .chat-content {
+        width: 100%;
+        display: flex; }
+        .chat-wrapper .main-part .main-chatting .chat-content .chat-image-wrap {
+          width: 50px;
+          height: 50px;
+          padding: 0 16px; }
+          .chat-wrapper .main-part .main-chatting .chat-content .chat-image-wrap .chat-image {
+            width: 34px;
+            height: 34px;
+            border-radius: 4px;
+            background: orange; }
+        .chat-wrapper .main-part .main-chatting .chat-content .chat {
+          flex: 1; }
+          .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-profile-content {
+            width: 100%;
+            height: 16px;
+            display: flex; }
+            .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-profile-content .profile-name {
+              padding-left: 8px;
+              height: 100%;
+              line-height: 16px;
+              color: #333;
+              font-size: 13px;
+              font-weight: 500; }
+            .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-profile-content .profile-owner-content {
+              width: 100px;
+              padding: 0 4px;
+              display: flex; }
+              .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-profile-content .profile-owner-content .owner-text {
+                font-weight: 300;
+                text-align: center;
+                margin: 0 2px;
+                font-size: 12px;
+                width: 40px;
+                height: 16px;
+                line-height: 17px;
+                background: #999;
+                color: #fdfdfd;
+                border-radius: 2px; }
+            .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-profile-content .profile-date {
+              width: 120px;
+              height: 16px;
+              line-height: 16px;
+              color: #ccc;
+              font-size: 8px; }
+          .chat-wrapper .main-part .main-chatting .chat-content .chat .chat-text-content {
+            padding: 8px;
+            color: #555;
+            font-size: 12px; }
+    .chat-wrapper .main-part .main-input {
       width: 100%;
       height: 80px;
       border-top: 1px solid #ddd;
       padding: 8px 16px 16px 16px; }
-      .chat-wrapper .main-content .main-input .main-input-content {
+      .chat-wrapper .main-part .main-input .main-input-content {
         width: 100%;
         height: 56px;
         border: 1px solid #ddd;
         border-radius: 4px;
         display: flex; }
-        .chat-wrapper .main-content .main-input .main-input-content .input-bar {
+        .chat-wrapper .main-part .main-input .main-input-content .input-bar {
           flex: 1;
           border-right: 1px solid #ddd;
           position: relative; }
-          .chat-wrapper .main-content .main-input .main-input-content .input-bar .i {
+          .chat-wrapper .main-part .main-input .main-input-content .input-bar .i {
             position: absolute;
             left: 8px;
             top: 8px;
             color: #ccc; }
-          .chat-wrapper .main-content .main-input .main-input-content .input-bar textarea {
+          .chat-wrapper .main-part .main-input .main-input-content .input-bar textarea {
             width: 100%;
             height: 100%;
             padding-left: 32px;
@@ -189,23 +255,23 @@ body {
             border: none;
             outline: none;
             background: #FFF7DF; }
-            .chat-wrapper .main-content .main-input .main-input-content .input-bar textarea::placeholder {
+            .chat-wrapper .main-part .main-input .main-input-content .input-bar textarea::placeholder {
               color: #999; }
-        .chat-wrapper .main-content .main-input .main-input-content .content-bar {
+        .chat-wrapper .main-part .main-input .main-input-content .content-bar {
           width: 80px;
           height: 56px; }
-          .chat-wrapper .main-content .main-input .main-input-content .content-bar .contents {
+          .chat-wrapper .main-part .main-input .main-input-content .content-bar .contents {
             display: flex;
             height: 40px;
             border-bottom: 1px solid #efefef;
             background: #eee; }
-            .chat-wrapper .main-content .main-input .main-input-content .content-bar .contents .i {
+            .chat-wrapper .main-part .main-input .main-input-content .content-bar .contents .i {
               flex: 1;
               text-align: center;
               height: 40px;
               color: #777;
               line-height: 40px; }
-          .chat-wrapper .main-content .main-input .main-input-content .content-bar .empty-content {
+          .chat-wrapper .main-part .main-input .main-input-content .content-bar .empty-content {
             height: 24px; }
   .chat-wrapper .right-side-bar {
     width: 36px;
