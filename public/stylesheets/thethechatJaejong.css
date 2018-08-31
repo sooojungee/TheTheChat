@@ -5,9 +5,12 @@
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; }
 
 .wrapper {
+  width: inherit;
   display: flex;
   height: 100vh; }
   .wrapper .empty-bar {
@@ -23,7 +26,8 @@ body {
       height: 64px;
       padding: 8px;
       display: flex;
-      background: #ccc; }
+      color: rgba(255, 255, 255, 0.7);
+      background: #04436a; }
       .wrapper .channel-display .channel-header .profile-image {
         width: 48px;
         background-color: #00B7FF;
@@ -44,7 +48,7 @@ body {
         height: 100%; }
     .wrapper .channel-display .channel-option {
       display: flex;
-      background-color: #00B7FF;
+      background-color: #04436a;
       width: 100%;
       height: 52px;
       padding: 8px; }
@@ -56,40 +60,66 @@ body {
           border-radius: 8px;
           border-color: white; }
       .wrapper .channel-display .channel-option .channel-adder {
+        color: rgba(255, 255, 255, 0.4);
         flex: 1;
         text-align: center;
         line-height: 36px;
-        font-size: 24px; }
+        font-size: 1rem; }
     .wrapper .channel-display .channel-body {
       width: 100%;
       height: calc(100% - 188px);
       color: white;
-      padding: 16px 0 16px 16px; }
+      padding: 16px 0 16px 16px;
+      background-color: #044b76; }
       .wrapper .channel-display .channel-body .channel-group {
         margin-top: 24px;
-        background: hotpink;
-        padding: 4px; }
+        padding: 4px;
+        color: rgba(255, 255, 255, 0.7); }
       .wrapper .channel-display .channel-body .channel-item {
         width: 100%;
-        background: peachpuff;
         display: flex;
         height: 24px; }
+        .wrapper .channel-display .channel-body .channel-item:hover {
+          background-color: #04436a;
+          cursor: pointer; }
+          .wrapper .channel-display .channel-body .channel-item:hover .hidden {
+            color: rgba(255, 255, 255, 0.4); }
         .wrapper .channel-display .channel-body .channel-item .icon {
           width: 24px;
           height: 100%;
-          background: mediumpurple; }
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 1rem;
+          height: 24px;
+          line-height: 24px; }
         .wrapper .channel-display .channel-body .channel-item .text {
           flex: 1;
           height: 100%;
-          background: magenta; }
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 1rem;
+          height: 24px;
+          line-height: 24px; }
+        .wrapper .channel-display .channel-body .channel-item > i {
+          font-size: 1rem;
+          height: 24px;
+          line-height: 24px; }
+        .wrapper .channel-display .channel-body .channel-item .fa-lock {
+          font-size: 1rem;
+          height: 24px;
+          line-height: 24px; }
+        .wrapper .channel-display .channel-body .channel-item .hidden {
+          color: rgba(255, 255, 255, 0); }
+          .wrapper .channel-display .channel-body .channel-item .hidden:hover {
+            color: rgba(255, 255, 255, 0.7); }
     .wrapper .channel-display .channel-footer {
       width: 100%;
       height: 72px;
-      background: gold;
+      color: white;
+      background: #04436a;
       padding: 16px;
-      font-size: 40px;
+      font-size: 2.3rem;
       line-height: 40px;
-      text-align: center; }
+      text-align: center;
+      font-weight: 900; }
   .wrapper .main-display {
     display: flex;
     flex-direction: column;
@@ -110,11 +140,96 @@ body {
         font-size: 1.5rem; }
     .wrapper .main-display > .chat-logs-zone {
       flex: 1; }
+      .wrapper .main-display > .chat-logs-zone > .chat-with-profile {
+        display: flex;
+        margin: 4px 0; }
+        .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .profile-image {
+          width: 48px;
+          background-color: #00B7FF;
+          height: 100%;
+          border-radius: 8px;
+          line-height: 48px;
+          text-align: center;
+          font-weight: 600;
+          font-size: 1.2rem;
+          margin-left: 24px;
+          margin-right: 16px; }
+        .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .text-zone > .profile-informations {
+          display: flex; }
+          .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .text-zone > .profile-informations > .profile-name {
+            font-weight: 700;
+            margin-right: 8px;
+            font-size: 1rem;
+            height: 24px;
+            line-height: 24px; }
+          .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .text-zone > .profile-informations > .leader-mark {
+            color: white;
+            background-color: #a0a0a0;
+            margin-right: 8px;
+            border-radius: 3px;
+            font-weight: 700;
+            padding: 0 4px;
+            font-size: 1rem;
+            height: 24px;
+            line-height: 24px; }
+          .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .text-zone > .profile-informations > .time {
+            color: #a0a0a0;
+            font-size: 1rem;
+            height: 24px;
+            line-height: 24px;
+            font-size: 0.92rem;
+            margin-right: 8px; }
+          .wrapper .main-display > .chat-logs-zone > .chat-with-profile > .text-zone > .profile-informations > i.fa-cog {
+            color: #a0a0a0;
+            font-size: 1rem;
+            height: 24px;
+            line-height: 24px;
+            font-size: 0.9rem; }
+      .wrapper .main-display > .chat-logs-zone > .simple-chat {
+        display: flex;
+        margin: 4px 0; }
+        .wrapper .main-display > .chat-logs-zone > .simple-chat > i.fa-cog {
+          color: #a0a0a0;
+          margin-left: 56px;
+          margin-right: 16px;
+          font-size: 1rem;
+          height: 24px;
+          line-height: 24px; }
+      .wrapper .main-display > .chat-logs-zone .chat-log {
+        font-size: 1rem;
+        height: 24px;
+        line-height: 24px; }
     .wrapper .main-display > .chat-sender {
       display: flex;
       height: 80px;
       border-top: 1px solid #aaa;
       padding: 8px 16px; }
+      .wrapper .main-display > .chat-sender > .sender-group {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        border: 1px solid #aaa;
+        border-radius: 16px;
+        overflow: hidden; }
+        .wrapper .main-display > .chat-sender > .sender-group > .emoticon-adder {
+          width: 60px;
+          text-align: center;
+          line-height: 46px; }
+        .wrapper .main-display > .chat-sender > .sender-group > textarea.message-content {
+          flex: 1;
+          height: inherit;
+          border-style: none;
+          border-color: Transparent;
+          overflow: auto;
+          outline: none;
+          border-right: 1px solid #aaa; }
+        .wrapper .main-display > .chat-sender > .sender-group > .file-adder {
+          width: 36px;
+          height: inherit;
+          text-align: center;
+          line-height: 46px;
+          font-size: 1.6rem;
+          background-color: #ddd; }
   .wrapper .function-display {
     width: 40px;
     height: 100%;
