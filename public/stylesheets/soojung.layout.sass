@@ -1,5 +1,4 @@
-$title_color: #04436a
-$title_color_rgba: rgba(2, 67, 106, 0.97)
+@import "global"
 
 *
   box-sizing: border-box
@@ -26,13 +25,13 @@ body
       display: flex
       padding: 8px
       $header-height: 34px
-      background: $title_color
+      background: $background-blue-first
       .header-image
         width: $header-height
         height: $header-height
-        background: orange
+        background: $state-occupied
         border-radius: 4px
-        color: white
+        color: $font-grey-first
         font-size: 21px
         font-weight: 600
         line-height: $header-height
@@ -42,7 +41,7 @@ body
         height: $header-height
         padding: 0 8px
         line-height: $header-height
-        color: white
+        color: $font-blue-first
         font-weight: 300
       .header-status
         width: 16px
@@ -50,10 +49,10 @@ body
         .i
           width: 100%
           height: 100%
-          color: white
+          color: $font-blue-first
           line-height: $header-height
     .left-input
-      background: $title_color
+      background: $background-blue-first
       width: 100%
       height: 45px
       display: flex
@@ -61,7 +60,7 @@ body
       .input-bar
         flex: 1
         height: 100%
-        border: 1px solid #cccc
+        border: 1px solid $border-blue-first
         border-radius: 4px
         position: relative
         margin-right: 16px
@@ -69,7 +68,7 @@ body
         .i
           width: 16px
           height: 29px
-          color: #cccc
+          color: $font-blue-second
           position: absolute
           left: 8px
           line-height: 29px
@@ -77,19 +76,19 @@ body
         input
           width: 100%
           height: 100%
-          background: rgba(255, 255, 255, 0.17)
+          background: $background-blue-ninth
           border: none
           outline: none
           padding-left: 32px
-          color: white
+          color: $font-grey-first
           &::placeholder
-            color: #cccc
+            color: $font-blue-second
             font-weight: 300
       .adder
         width: 15px
         height: 100%
         line-height: 29px
-        color: #cccc
+        color: $font-blue-second
         font-size: 22px
         font-weight: 500
     .left-body-part
@@ -97,14 +96,12 @@ body
       height: calc(100% - 155px)
       overflow-y: auto
       //opacity: 0.97
-      background: $title_color_rgba
+      background: $background-blue-third
       padding: 8px
-      $left-body-content-color: rgba(255, 255, 255, 0.85)
-      color: $left-body-content-color
+      color: $font-blue-third
       .empty-part
         width: 100%
         height: 10px
-        //background: #cccccc
       .header-part
         width: 100%
         height: 24px
@@ -112,7 +109,6 @@ body
         line-height: 24px
         color: inherit
         padding-left: 8px
-
       .item-part
         width: 100%
         height: 24px
@@ -130,26 +126,22 @@ body
         .item-text
           flex: 1
           font-size: 12px
-
           line-height: 24px
         .show
           display: none
-
         &:hover
-          background: $title_color
+          background: $background-blue-fourth
           .show
             display: block
-
     .left-footer
       width: 100%
       height: 60px
-      background: $title_color
+      background: $background-blue-first
       padding: 8px
       line-height: 44px
       color: white
       font-size: 38px
       font-weight: 800
-
   .main-part
     flex: 1
     height: 100%
@@ -158,14 +150,14 @@ body
     .main-header
       width: 100%
       height: 50px
-      border-bottom: 1px solid #ddd
+      border-bottom: 1px solid $border-grey-first
       padding: 8px 16px
       display: flex
       .i
         width: 32px
         height: 100%
         line-height: 34px
-        color: #ccc
+        color: $font-grey-second
       .header-text
         flex: 1
         height: 100%
@@ -174,7 +166,6 @@ body
         font-size: 21px
     .main-chatting
       width: 100%
-      //height: calc(100% - 130px)
       flex: 1
       overflow-y: auto
       .chat-date
@@ -184,7 +175,7 @@ body
         .date-line
           flex: 1
           height: 20px
-          border-bottom: 1px solid #dedede
+          border-bottom: 1px solid $font-grey-third
         .date-text
           width: 110px
           line-height: 40px
@@ -193,12 +184,6 @@ body
           font-size: 10px
           color: #444
           font-weight: 600
-
-
-
-
-
-
       .chat-content
         width: 100%
         display: flex
@@ -207,7 +192,6 @@ body
         .chat-image-zone
           width: 40px
           .chat-image
-
             text-align: center
             font-size: 30px
             border-radius: 5px
@@ -215,15 +199,13 @@ body
             max-height: 40px
             border: solid 1px
             &.orange
-              background: orange
+              background: $state-occupied
           .i.fas.fa-cog
             width: 100%
-            color: black
+            color: $font-grey-third
             font-size: 12px
             text-align: end
             line-height: 21px
-
-
         .chat
           width: calc(100% - 40px)
           .chat-profile-content
@@ -243,10 +225,9 @@ body
                 margin: 0 2px
                 font-size: 12px
                 width: 40px
-                background: #999
+                background: $background-grey-third
                 color: #fdfdfd
                 border-radius: 2px
-
             .profile-date
               line-height: 16px
               color: #666666
@@ -255,18 +236,12 @@ body
             .i.fas.fa-cog
               font-size: 12px
               line-height: 16px
-
+              color: $font-grey-third
           .chat-text-content
             padding: 4px 8px 0 8px
             color: #555
             font-size: 12px
             line-height: 18px
-
-
-
-
-
-
     .main-input
       width: 100%
       max-height: 160px
