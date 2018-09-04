@@ -25,6 +25,10 @@
   background: $name-tag-color-purple !important
 
 
+.close-file
+  height: 30px
+  overflow: hidden
+
 
 .i
   cursor: pointer
@@ -38,11 +42,18 @@
   .login
     width: 200px
     height: 80px
-    border: 2px solid #ddd
+    //border: 2px solid #ddd
     text-align: center
     line-height: 80px
     font-size: 20px
     cursor: pointer
+    position: relative
+    .i
+      right: 40px
+      top: 4px
+      position: absolute
+      font-size: 30px
+      color: red
 
 body
   padding: 0
@@ -292,6 +303,7 @@ body
             color: #555
             font-size: 12px
             line-height: 18px
+            transition: height 0.3s
             .file-content
               height: 120px
               border-left: 4px solid #ddd
@@ -313,6 +325,9 @@ body
                   color: #444444
                   border: 1px solid #444444
                   border-radius: 4px
+                .down-arrow
+                  width: 10px
+                  border: none
               .i
                 padding: 4px 8px
                 width: 80px

@@ -10,7 +10,7 @@ const messages = {};
 const messageTemplate = `<div class="chat-content">
     <div class="chat-image-zone">
         <div class="chat-image">Name[0]</div>
-        <div class="i fas fa-cog display-none"></div>
+        <div class="i fas fa-cog left-cog display-none"></div>
     </div>
     <div class="chat">
         <div class="chat-profile-content">
@@ -20,13 +20,14 @@ const messageTemplate = `<div class="chat-content">
                 <div class="owner-text owner">Owner</div>
             </div>
             <div class="profile-date">time</div>
-            <div class="i fas fa-cog"></div>
+            <div class="i fas fa-cog right-cog"></div>
         </div>
         <div class="chat-text-content">
           <div class="file-content">
               <div class="file-header">
                   <div class="file-name">filename</div>
                   <div class="i fas fa-download download"></div>
+                  <div class ="i fas fa-sort-down down-arrow"></div>
               </div>
               <div class="file i fas fa-file"></div>
           </div>
@@ -85,19 +86,26 @@ FirebaseApi.setOnPageUpdateListener((user) => {
 });
 
 FirebaseApi.setOnUpdateContentListener((data) => {
-  messages.ele = new Element(data);
-  messages[data.signAt] = data;
+  const ele = new Element(data);
+  messages[data.date] = data;
+  
+  if (lastElement !== null) {
+    lastElement.next(ele);
+    ele.prev(lastElement);
+  }
+  lastElement = ele;
   
   $mainChatting.scrollTop($mainChatting[0].scrollHeight);
   
-  
 });
-
+let lastElement = null;
 const Element = function Element(user) {
   
+  const that = this;
+  this.currentUser = user;
   const time = new Date(user.date * 1);
+  this.dateString = `${time.getHours() > 12 ? '오후' : '오전'} ${time.getHours() % 12}:${time.getMinutes()}`
   checkDate(time);
-  const dateString = `${time.getHours() > 12 ? '오후' : '오전'} ${time.getHours() % 12}:${time.getMinutes()}`
   
   const $ele = $(messageTemplate);
   if (user.type === 'text') {
@@ -113,7 +121,34 @@ const Element = function Element(user) {
   $ele.find('.chat-image').addClass(user.color);
   $ele.find('.chat-image').text(user.displayName[0]);
   $ele.find('.profile-name').text(user.displayName);
-  $ele.find('.profile-date').text(dateString);
+  $ele.find('.profile-date').text(that.dateString);
+  
+  
+  let prev = null;
+  this.prev = (ele) => {
+    if (_.isNil(ele)) return prev;
+    prev = ele;
+    that.update();
+  };
+  
+  let next = null;
+  this.next = (ele) => {
+    if (_.isNil(ele)) return next;
+    next = ele;
+    that.update();
+  };
+  
+  this.update = () => {
+    if (prev !== null
+      && prev.currentUser.displayName === that.currentUser.displayName
+      && prev.dateString === that.dateString) {
+      $ele.find('.left-cog').removeClass('display-none');
+      $ele.find('.right-cog').addClass('display-none');
+      $ele.find('.chat-image').addClass('display-none');
+      $ele.find('.chat-profile-content').addClass('display-none');
+    }
+  };
+  
   
   $mainChatting.append($ele);
   user.ele = $ele;
@@ -122,9 +157,25 @@ const Element = function Element(user) {
     FirebaseDB.downloadFile(user);
   });
   
+  $ele.find('.down-arrow').on('click', ()=>{
+    if(!$ele.find('.chat-text-content').hasClass('close-file')){
+      $ele.find('.down-arrow').removeClass('fa-sort-down');
+      $ele.find('.down-arrow').addClass('fa-caret-right');
+      $ele.find('.chat-text-content').addClass('close-file');
+    }
+    else {
+      $ele.find('.down-arrow').addClass('fa-sort-down');
+      $ele.find('.down-arrow').removeClass('fa-caret-right');
+      $ele.find('.chat-text-content').removeClass('close-file');
+    }
+  
+  });
+  
+  return this;
 };
 
 let dateString = null;
+
 function checkDate(time) {
   
   const date = time.toDateString().split(" ");
@@ -134,7 +185,7 @@ function checkDate(time) {
   
   const thisDateString = month + '  ' + day + '  ' + year;
   
-  if(dateString !== thisDateString){
+  if (dateString !== thisDateString) {
     dateString = thisDateString;
     const $ele = $(dateTemplate);
     $ele.find('.date-text').text(dateString);
