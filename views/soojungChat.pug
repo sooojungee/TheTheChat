@@ -2,16 +2,23 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/loading.css')
     link(rel='stylesheet', href='/stylesheets/soojung.layout.css')
     link(rel='stylesheet', href='/stylesheets/soojung.color.css')
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
-    //script(src="/babel-polyfill/dist/polyfill.js")
+    script(src="/babel-polyfill/dist/polyfill.js")
     script(src="https://code.jquery.com/jquery-3.3.1.js",
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=",
     crossorigin="anonymous")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js')
+    script(src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js")
 
   body
-    .chat-wrapper
+    input(type="file" multiple='multiple').display-none#uploadFile
+    .loading-wrapper
+      .loading-text LOADING
+      .loading-content
+    .chat-wrapper.display-none
       .empty-bar
       .left-side-bar
         .left-header
@@ -47,13 +54,13 @@ html
           .header-text class_level1
 
         .main-chatting
-          .chat-date
-            .date-line
-            .date-text 2018년 5월 25일
-            .date-line
+          //.chat-date
+          //  .date-line
+          //  .date-text 2018년 5월 25일
+          //  .date-line
 
 
-          .chat-content
+          //.chat-content
             .chat-image-zone
               .chat-image JH
               .i.fas.fa-cog.display-none
@@ -66,9 +73,29 @@ html
                 .profile-date 오후 1시 42분
                 .i.fas.fa-cog
               .chat-text-content sdfsdfsdf sdfsd<br>fsdf sdf sdas<br>da fsd asdfsdfsd<br>f sdf sdasda fsd a
+                .file-content.display-none
+                  .file-name ddddd.gng
+                  .file.i.fas.fa-file
+          //.chat-content
+            .chat-image-zone
+              .chat-image JH
+              .i.fas.fa-cog.display-none
+            .chat
+              .chat-profile-content
+                .profile-name sooojung.lee
+                .profile-owner-content
+                  .owner-text.admin Admin
+                  .owner-text.owner Owner
+                .profile-date 오후 1시 42분
+                .i.fas.fa-cog
+              .chat-text-content
+                .file-content
+                  .file-header
+                    .file-name ddddd.gng
+                    .i.fas.fa-download
+                  .file.i.fas.fa-file
 
-
-          .chat-content
+          //.chat-content
             .chat-image-zone
               .chat-image
               .i.fas.fa-cog
@@ -82,8 +109,6 @@ html
                 .i.fas.fa-cog.display-none
               .chat-text-content sdfsdfsdf
 
-
-
         .main-input
           .main-input-content
             .input-bar
@@ -91,7 +116,7 @@ html
               textarea(placeholder='메세지')
             .content-bar
               .contents
-                .i.fas.fa-paperclip
+                .i.fas.fa-paperclip#uploadButton
                 .i.fas.fa-microphone
                 .i.fas.fa-video
               .empty-content
@@ -104,34 +129,8 @@ html
         .icon.i.fas.fa-at
         .icon.i.fas.fa-star
         .icon.i.fas.fa-thumbtack
+
+  script(src='/firebase.js')
+  script(src='/chatUI.js')
   script(src='/test.js')
-    //.wrapper
-    //  .empty-bar
-    //  .channel-display
-    //    .channel-header.first-color
-    //      .profile-image JH
-    //      .profile-name Jaejong Heo
-    //      .logout-button
-    //        .i.fas.fa-angle-down
-    //    .channel-option.first-color
-    //      .input-search
-    //        .i.fas.fa-search
-    //        input(placeholder="검색( CMD+K)")
-    //      .channel-adder +
-    //    .channel-body.first-color
-    //      .channel-group 즐겨찾기
-    //      .channel-item
-    //        .icon-type.icon.i.fas.fa-lock
-    //        .text 안녕
-    //        .icon-hide.icon.i.far.fa-eye-slash
-    //        .icon-quit.icon.i.fas.fa-sign-out-alt
-    //      .channel-item s
-    //      .channel-group 즐겨찾기
-    //      .channel-item a
-    //      .channel-item s
-    //      .channel-group 즐겨찾기
-    //      .channel-item a
-    //      .channel-item s
-    //    .channel-footer the.the.chat
-    //  .main-display
-    //  .function-display
+

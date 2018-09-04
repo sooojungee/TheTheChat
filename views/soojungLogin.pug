@@ -1,0 +1,22 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/loading.css')
+    link(rel='stylesheet', href='/stylesheets/soojung.layout.css')
+    link(rel='stylesheet', href='/stylesheets/soojung.color.css')
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+    script(src="/babel-polyfill/dist/polyfill.js")
+    script(src="https://code.jquery.com/jquery-3.3.1.js",
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=",
+    crossorigin="anonymous")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js')
+    script(src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js")
+  body
+    .login-wrapper
+      .login LOGIN
+    .loading-wrapper.display-none
+      .loading-text LOADING
+      .loading-content
+
+  script(src='/firebase.js')
+  script(src='/login.js')

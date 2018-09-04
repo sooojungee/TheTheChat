@@ -14,6 +14,10 @@ router.get('/soo', function(req, res, next) {
   res.render('soojungChat', { title: 'Express' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('soojungLogin', { title: 'Express' });
+});
+
 router.get('/hyeonsik', function(req, res, next) {
     res.render('hyeonsik', { title: 'Express' });
 });
